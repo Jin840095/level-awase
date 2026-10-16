@@ -1,0 +1,115 @@
+"""概念辞書・授業表・本を1つのJSONにまとめ、整合性を検査する。"""
+import json, sys, os
+HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
+
+cm = json.load(open(HERE + 'concept_map_draft.json', encoding='utf-8'))
+bk = json.load(open(HERE + 'books_draft.json', encoding='utf-8'))
+
+concepts = [{k: c[k] for k in ('id', 'name', 'category', 'requires')} for c in cm['concepts']]
+cids = {c['id'] for c in concepts}
+cat = {c['id']: c['category'] for c in concepts}
+
+courses = []
+for i, c in enumerate(cm['courses'], 1):
+    courses.append({'id': f'c{i:02d}', 'name': c['name'], 'year': c['year'], 'teaches': c['teaches']})
+
+# 背表紙に縦書きで出す短い題名(正式な題名は books の title)。キーは題名に含まれる文字列。
+SHORT = [
+    ("DeepLearning関連論文", "論文の読み方手引き(上)"),
+    ("Kaggleに挑む", "Kaggleに挑む深層学習"),
+    ("発展ディープラーニング", "発展ディープラーニング"),
+    ("グラフニューラルネットワーク", "グラフニューラルネット"),
+    ("ゼロから作るDeep Learning ―Python", "ゼロから作る① 理論と実装"),
+    ("Deep Learning ❷", "ゼロから作る② 自然言語処理"),
+    ("Deep Learning ❸", "ゼロから作る③ フレームワーク"),
+    ("Deep Learning ❹", "ゼロから作る④ 強化学習"),
+    ("Deep Learning ❺", "ゼロから作る⑤ 生成モデル"),
+    ("Deep Learning ❻", "ゼロから作る⑥ LLM"),
+    ("データ分析のための数理", "データ分析の数理モデル"),
+    ("先輩データサイエンティスト", "先輩DSからの指南書"),
+    ("高校数学の演習", "高校数学で学ぶ機械学習"),
+    ("生成AI・ChatGPT", "ChatGPTでPython"),
+    ("直感的に理解する", "Transformerの仕組み"),
+    ("12歳からはじめる", "12歳からのPythonゲーム"),
+    ("Chainerで", "Chainerで学ぶDL入門"),
+    ("Excelでわかる", "ExcelでわかるDL超入門"),
+    ("AutoML Vision", "AutoML Vision入門"),
+    ("Minecraft", "MinecraftでPython"),
+    ("Pythonスタートブック", "Pythonスタートブック"),
+    ("Pythonチュートリアル", "Pythonチュートリアル"),
+    ("Pythonによるはじめての", "はじめての機械学習"),
+    ("Jupyter[実践]", "Jupyter[実践]入門"),
+    ("PyTorchニューラルネットワーク", "PyTorch実装ハンドブック"),
+    ("Raspberry Pi", "Raspberry Pi機械学習"),
+    ("Unityではじめる機械学習", "Unity機械学習・強化学習"),
+    ("Unityの教科書", "Unityの教科書"),
+    ("ゼロからつくるPython", "ゼロからつくる機械学習"),
+    ("たのしいプログラミング", "たのしいプログラミング"),
+    ("データサイエンティストのためのデータベース", "DS向けデータベース基礎"),
+    ("いちばんやさしい", "やさしいDL入門教室"),
+    ("確かな力が身につく", "Python「超」入門"),
+    ("逆引き大全", "Unity逆引き大全"),
+    ("Processing", "Processing入門"),
+    ("Unity VRアプリ", "UnityVRアプリ開発入門"),
+    ("図解入門", "機械学習の基本と仕組み"),
+    ("退屈なことは", "退屈なことはPython"),
+]
+def short_of(title):
+    for key, s in SHORT:
+        if key in title:
+            return s
+    return title
+
+books = []
+for i, b in enumerate(bk['books'], 1):
+    books.append({
+        'id': f'b{i}',
+        'title': b['title'],
+        'short': short_of(b['title']),
+        'category': b.get('category') or cat[b['teaches'][0]],
+        'author': b.get('author'),
+        'publisher': b.get('publisher'),
+        'year': b.get('year'),
+        'title_basis': b.get('title_basis', ''),
+        'requires': b['requires'],
+        'teaches': b['teaches'],
+        'book_requires': b.get('book_requires', []),
+        'audience': b['audience'],
+        'stated_prerequisite': b['stated_prerequisite'],
+        'evidence': b['evidence'],
+        'confidence': b['confidence'],
+        'note': b['note'],
+        'verified': False,
+    })
+
+errors = []
+for c in concepts:
+    for r in c['requires']:
+        if r not in cids: errors.append(('concept', c['id'], r))
+for c in courses:
+    for t in c['teaches']:
+        if t not in cids: errors.append(('course', c['name'], t))
+titles = {b['title'] for b in books}
+for b in books:
+    for t in b['requires'] + b['teaches']:
+        if t not in cids: errors.append(('book', b['title'], t))
+    for t in b['book_requires']:
+        if t not in titles: errors.append(('book_requires', b['title'], t))
+    if len(b['short']) > 16: errors.append(('short-too-long', b['title'], b['short']))
+if len(titles) != len(books):
+    errors.append(('duplicate-book-title',))
+req = {c['id']: c['requires'] for c in concepts}
+def has_cycle(n, stack):
+    return n in stack or any(has_cycle(m, stack | {n}) for m in req[n])
+if any(has_cycle(n, set()) for n in req):
+    errors.append(('concept-cycle',))
+if errors:
+    print('ERRORS', errors); sys.exit(1)
+
+order = ['情報基礎', 'プログラミング', '統計', 'データベース', '機械学習', '深層学習', '自然言語処理']
+cats = [c for c in order if any(b['category'] == c for b in books)]
+cats += sorted({b['category'] for b in books} - set(cats))
+
+data = {'concepts': concepts, 'courses': courses, 'books': books, 'categories': cats, 'excluded': cm['excluded_courses']}
+json.dump(data, open(HERE + 'data.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+print('ok', len(concepts), 'concepts', len(courses), 'courses', len(books), 'books', cats)

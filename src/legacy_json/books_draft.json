@@ -1,0 +1,1177 @@
+{
+ "_note": "AIによる下書き。根拠は「はじめに」「まえがき」の数ページが中心。目次がない本は、前提・習得概念に推定を含む。本文の引用は載せず、要旨のみ保持。",
+ "books": [
+  {
+   "title": "評価指標入門",
+   "evidence": "まえがき(想定する読者)3ページ",
+   "audience": "業務で機械学習・データサイエンスを行う人。学生や教員も読める",
+   "stated_prerequisite": "基本的な統計学と機械学習の基礎知識。ただし特別な知識は不要とも書かれている",
+   "requires": [
+    "ml_framework",
+    "desc_stats"
+   ],
+   "teaches": [
+    "eval_metrics",
+    "model_eval"
+   ],
+   "confidence": "medium",
+   "note": "理論・計算手法・ライブラリの解説ではなく、評価指標の考え方が中心と明記。数式は直感重視",
+   "title_basis": "ファイル名",
+   "category": "機械学習"
+  },
+  {
+   "title": "プログラムはなぜ動くのか",
+   "evidence": "はじめに 2ページ",
+   "audience": "プログラミングを始めたい人、初級プログラマ、中級PCユーザ",
+   "stated_prerequisite": "明記なし(入門向け)",
+   "requires": [],
+   "teaches": [
+    "computer_architecture"
+   ],
+   "confidence": "medium",
+   "note": "メモリ上の機械語をCPUが解釈・実行する仕組みを軸にしている",
+   "title_basis": "ファイル名",
+   "category": "情報基礎"
+  },
+  {
+   "title": "達人プログラマー",
+   "evidence": "まえがき 1ページ",
+   "audience": "より効率的・生産的になりたい開発者",
+   "stated_prerequisite": "明記なし。開発経験がある読者を想定していると読める",
+   "requires": [
+    "py_basic"
+   ],
+   "teaches": [
+    "sw_practice"
+   ],
+   "confidence": "low",
+   "note": "requiresは推定。特定の言語・技術の解説ではなく、考え方が中心",
+   "title_basis": "ファイル名",
+   "category": "プログラミング"
+  },
+  {
+   "title": "コンピュータシステムの基礎",
+   "evidence": "はじめに 1ページ(第17版)",
+   "audience": "情報技術を学ぶ初学者。基本情報技術者試験の出題傾向にも対応",
+   "stated_prerequisite": "初学者向けで、前提なし",
+   "requires": [],
+   "teaches": [
+    "computer_basics",
+    "ai_overview",
+    "cybersecurity"
+   ],
+   "confidence": "low",
+   "note": "AI・IoT・GPS・センサ・セキュリティの追加を述べているが、章立てがないため幅は不明",
+   "title_basis": "ファイル名",
+   "category": "情報基礎"
+  },
+  {
+   "title": "コンピュータの構成と設計(上)",
+   "evidence": "まえがき 1ページ",
+   "audience": "アセンブリ言語や論理設計の経験がなくても、コンピュータの基本構造を理解したい人",
+   "stated_prerequisite": "アセンブリ・論理設計の経験は不要と明記",
+   "requires": [
+    "binary",
+    "py_basic"
+   ],
+   "teaches": [
+    "computer_architecture"
+   ],
+   "confidence": "low",
+   "note": "requiresは推定。まえがきだけでは実際の難しさは判定できない(目次が必要)",
+   "title_basis": "ファイル名",
+   "category": "情報基礎"
+  },
+  {
+   "title": "コンピュータの構成と設計(下)",
+   "evidence": "本文5.1節 1ページ(メモリ階層の導入)",
+   "audience": "上巻の続き",
+   "stated_prerequisite": "上巻の内容",
+   "requires": [
+    "computer_architecture"
+   ],
+   "teaches": [
+    "computer_architecture"
+   ],
+   "book_requires": [
+    "コンピュータの構成と設計(上)"
+   ],
+   "confidence": "low",
+   "note": "まえがきではなく本文の1ページ。局所性の法則を例え話で導入している",
+   "title_basis": "ファイル名",
+   "category": "情報基礎"
+  },
+  {
+   "title": "DeepLearning関連論文の読み方手引き(上巻)",
+   "category": "深層学習",
+   "author": "lib-arts(ブログ「Liberal Art's diary」)",
+   "publisher": null,
+   "year": null,
+   "title_basis": "写真に題名なし。ファイル名の文字数と、著者ブログの書名・前提知識の記述が一致したため特定。スペースや「上巻」の付け方は要確認",
+   "evidence": "はじめに(対象読者・記法)2ページ。習得概念は著者ブログの章立てで補った",
+   "audience": "英語の基本構文が読め、入門書を2〜3冊読んだ、論文に挑戦したい人",
+   "stated_prerequisite": "英語の基本構文(SVOC・関係代名詞・that節)、CNN・RNN・AlexNet・VGGNet・ResNetなどの基本的な理解、機械学習の基本(モデル・学習・推論)、微分と線形代数(行列の積・逆行列・固有値)の簡単な知識",
+   "requires": [
+    "cnn",
+    "ml_framework",
+    "calculus",
+    "linear_algebra",
+    "english_basic"
+   ],
+   "teaches": [
+    "image_segmentation",
+    "gan",
+    "paper_reading"
+   ],
+   "confidence": "medium",
+   "note": "前提は「はじめに」に明記されている。習得概念は題名と著者ブログの章立て(画像分類・意味分割・生成モデル)から。*印の発展項目は初見では飛ばしてよいと書かれている"
+  },
+  {
+   "title": "Kaggleに挑む深層学習プログラミングの極意",
+   "category": "機械学習",
+   "author": "小嵜耕平・秋葉拓哉・林孝紀・石原祥太郎",
+   "publisher": "講談社(KS情報科学専門書)",
+   "year": 2023,
+   "title_basis": "写真に題名なし。ファイル名の文字数(17字)と、まえがきの内容(2022年にKaggleのユーザ数が1000万人、画像・テキストのコンテストを扱う)が書誌情報と一致",
+   "evidence": "まえがき(はじめに)1ページ。習得概念は出版社の紹介ページの章立てで補った",
+   "audience": "画像・テキストの機械学習コンテストに取り組みたい人(熟練者だけでなく初心者の学びの場にもなると述べている)",
+   "stated_prerequisite": "まえがきに明記なし",
+   "requires": [
+    "py_basic",
+    "ml_framework"
+   ],
+   "teaches": [
+    "ml_competition",
+    "cnn",
+    "text_classification",
+    "model_eval"
+   ],
+   "confidence": "low",
+   "note": "前提は推定。出版社ページの章立て(コンテスト基礎・探索的データ分析・画像分類・画像検索・テキスト分類)から習得概念を決めた"
+  },
+  {
+   "title": "つくりながら学ぶ!PyTorchによる発展ディープラーニング",
+   "category": "深層学習",
+   "author": "小川雄太郎",
+   "publisher": "マイナビ出版",
+   "year": 2019,
+   "title_basis": "ユーザー提供のファイル名と表紙のとおり(表紙: 小川雄太郎、マイナビ)",
+   "evidence": "まえがき1ページ(章立て・想定する読者)",
+   "audience": "ディープラーニングの基礎(CNNによる画像分類など)の実装経験がある人",
+   "stated_prerequisite": "ディープラーニングの基礎的な内容(畳み込みニューラルネットワークを用いた画像分類など)の実装経験",
+   "requires": [
+    "cnn",
+    "py_basic"
+   ],
+   "teaches": [
+    "pytorch",
+    "transfer_learning",
+    "computer_vision",
+    "image_segmentation",
+    "gan",
+    "anomaly_detection",
+    "seq_models"
+   ],
+   "confidence": "high",
+   "note": "第1章から順に読む構成で、各章は前の章の知識を使う。扱うモデルは VGG・SSD・PSPNet・OpenPose・DCGAN・AnoGAN・Transformer・BERT・3DCNN/ECO"
+  },
+  {
+   "title": "Rによるやさしい統計学",
+   "category": "統計",
+   "author": "山田剛史・杉澤武俊・村井潤一郎",
+   "publisher": "オーム社",
+   "year": 2008,
+   "title_basis": "写真に題名なし。ファイル名の文字数(10字)と、他のオーム社の統計書への言及・「第I部 基礎編」の記述が一致し、書誌情報で確認",
+   "evidence": "はじめに(対象となる読者)1ページ",
+   "audience": "文科系の学部学生、Rで統計の基礎を学びたい人、プログラム経験がなくRに尻込みしている人",
+   "stated_prerequisite": "プログラムの経験は不要(「プログラムはやったことがない」人も対象と書かれている)",
+   "requires": [],
+   "teaches": [
+    "desc_stats",
+    "r_lang",
+    "hypothesis_test",
+    "correlation",
+    "regression",
+    "data_viz"
+   ],
+   "confidence": "low",
+   "note": "写真は読者の説明のみ。習得概念は題名と「基礎編」「応用編(多変量解析)」の記述からの推定"
+  },
+  {
+   "title": "グラフニューラルネットワーク ―PyTorchによる実装―",
+   "category": "深層学習",
+   "author": "村田剛志",
+   "publisher": "オーム社",
+   "year": 2022,
+   "title_basis": "ファイル名は「グラフニューラルネットワーク」(14字)で、副題はなかった。まえがきの章立てが書誌情報(オーム社)と一致したため副題を補った",
+   "evidence": "1.1 はじめに(読者層・本書の構成)見開き1ページ。PyTorchの扱いは出版社の目次で補った",
+   "audience": "情報系の技術者や学生",
+   "stated_prerequisite": "画像認識などの深層学習の知識があることが望ましい。不十分でも読み進められるよう配慮されている",
+   "requires": [
+    "neural_net"
+   ],
+   "teaches": [
+    "gnn",
+    "pytorch"
+   ],
+   "confidence": "medium",
+   "note": "第1〜7章の構成(GNNとは・エンベディング・畳み込み・関連トピック・実装の準備・PyTorch Geometricによる実装・今後の学習)はまえがきで確認。前提は「望ましい」程度の書き方"
+  },
+  {
+   "title": "ゼロから作るDeep Learning ―Pythonで学ぶディープラーニングの理論と実装",
+   "category": "深層学習",
+   "author": "斎藤康毅",
+   "publisher": "オライリー・ジャパン",
+   "year": 2016,
+   "title_basis": "写真に題名なし(2ページ目にオライリーのGitHubリポジトリ名あり)。ファイル名の文字数(前半6字・後半18字)が書名と一致",
+   "evidence": "まえがき(誰のための本か・誰のための本ではないか・本書の読み方)3ページ",
+   "audience": "ディープラーニングを自分で実装して理解したい人。Pythonが初めての人も対象",
+   "stated_prerequisite": "なし(Pythonの使い方も本書で説明する)",
+   "requires": [],
+   "teaches": [
+    "py_basic",
+    "neural_net",
+    "gradient_descent",
+    "cnn"
+   ],
+   "confidence": "high",
+   "note": "最低限の外部ライブラリだけで実装する方針。自然言語処理・音声認識・最新の研究・GPU・フレームワークの使い方は扱わないと明記されている"
+  },
+  {
+   "title": "ゼロから作るDeep Learning ❷ ―自然言語処理編",
+   "category": "自然言語処理",
+   "author": "斎藤康毅",
+   "publisher": "オライリー・ジャパン",
+   "year": 2018,
+   "title_basis": "写真に題名なし。ファイル名の文字数と、まえがきの「前作の続編」「自然言語処理や時系列データ処理」の記述、出版社の書名が一致",
+   "evidence": "まえがき(誰のための本か)1ページ",
+   "audience": "前作『ゼロから作るDeep Learning』の読者。ニューラルネットワークとPythonの知識があれば、前作なしでも読めるよう配慮されている",
+   "stated_prerequisite": "前作で学んだ知識。1章でニューラルネットワークを復習する",
+   "requires": [
+    "neural_net",
+    "py_basic"
+   ],
+   "teaches": [
+    "word_embedding",
+    "seq_models"
+   ],
+   "confidence": "medium",
+   "note": "写真は「誰のための本か」と、学ぶ技術の最初の3項目(テキスト処理・単語の表現・word2vec)まで。RNN・Attentionなど後半の内容は、題名と前作の続編という位置づけからの推定"
+  },
+  {
+   "title": "ゼロから作るDeep Learning ❸ ―フレームワーク編",
+   "category": "深層学習",
+   "author": "斎藤康毅",
+   "publisher": "オライリー・ジャパン",
+   "year": 2020,
+   "title_basis": "ファイル名の「Deep Learning3」とまえがき(DeZeroを作る)から特定",
+   "evidence": "DeZeroを60ステップで作る/CNN・RNNにも取り組む",
+   "audience": "ディープラーニングの仕組みを内側から学びたい人",
+   "stated_prerequisite": "(まえがき1ページのみ確認)",
+   "requires": [
+    "neural_net",
+    "py_basic"
+   ],
+   "teaches": [
+    "autodiff",
+    "cnn",
+    "seq_models"
+   ],
+   "confidence": "low",
+   "note": "前提の記述が写っていないため、シリーズ前作の内容から推定"
+  },
+  {
+   "title": "ゼロから作るDeep Learning ❹ ―強化学習編",
+   "category": "機械学習",
+   "author": "斎藤康毅",
+   "publisher": "オライリー・ジャパン",
+   "year": 2022,
+   "title_basis": "ファイル名の「Deep Learning4」とまえがきから特定",
+   "evidence": "前半6章は強化学習の基礎(DL不要)、後半でDQN・方策勾配などを実装",
+   "audience": "強化学習をゼロから学びたい人",
+   "stated_prerequisite": "前半はディープラーニング不要",
+   "requires": [
+    "py_basic",
+    "probability"
+   ],
+   "teaches": [
+    "reinforcement_learning",
+    "deep_rl"
+   ],
+   "confidence": "medium",
+   "note": "DQN以降はディープラーニングの知識が要るため、深層強化学習は別の概念にした"
+  },
+  {
+   "title": "ゼロから作るDeep Learning ❺ ―生成モデル編",
+   "category": "深層学習",
+   "author": "斎藤康毅",
+   "publisher": "オライリー・ジャパン",
+   "year": 2024,
+   "title_basis": "ファイル名の「Deep Learning5」とまえがきから特定",
+   "evidence": "正規分布から拡散モデルまで10ステップ",
+   "audience": "生成モデルを数式から理解したい人",
+   "stated_prerequisite": "微積分・線形代数などの数学とPythonの基礎",
+   "requires": [
+    "py_basic",
+    "calculus",
+    "linear_algebra",
+    "probability"
+   ],
+   "teaches": [
+    "diffusion"
+   ],
+   "confidence": "medium",
+   "note": "まえがきに前提が明記されている"
+  },
+  {
+   "title": "ゼロから作るDeep Learning ❻ ―LLM編",
+   "category": "深層学習",
+   "author": "斎藤康毅",
+   "publisher": "オライリー・ジャパン",
+   "year": 2025,
+   "title_basis": "ファイル名の「Deep Learning6_LLM」とまえがきから特定",
+   "evidence": "前提にPython・PyTorch・数学・順伝播と誤差逆伝播と勾配降下法を挙げている",
+   "audience": "ディープラーニングの基礎がある人",
+   "stated_prerequisite": "Python/PyTorch/線形代数・確率統計/DLの基礎",
+   "requires": [
+    "py_basic",
+    "pytorch",
+    "neural_net",
+    "gradient_descent",
+    "linear_algebra",
+    "probability"
+   ],
+   "teaches": [
+    "llm"
+   ],
+   "confidence": "high",
+   "note": "まえがきに前提が明記されている"
+  },
+  {
+   "title": "データサイエンス入門",
+   "category": "統計",
+   "author": "上田雅夫・後藤正幸",
+   "publisher": "有斐閣",
+   "year": 2023,
+   "title_basis": "ファイル名の文字数と有斐閣の書誌情報(副題は省略)から特定。副題の有無は要確認",
+   "evidence": "全9章、統計と機械学習をまとめて学ぶ入門書",
+   "audience": "大学で初めてデータサイエンスを学ぶ人",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "ds_cycle",
+    "data_viz",
+    "desc_stats",
+    "inferential",
+    "ml_framework"
+   ],
+   "confidence": "medium",
+   "note": "著者・出版社はWeb上の書誌情報で確認"
+  },
+  {
+   "title": "データ分析のための数理モデル入門",
+   "category": "統計",
+   "author": "江崎貴裕",
+   "publisher": "ソシム",
+   "year": 2020,
+   "title_basis": "ファイル名の文字数(16文字)とまえがきから特定",
+   "evidence": "分野をまたぐ数理モデルを4部構成で解説、脚注に発展内容",
+   "audience": "データ分析の初心者から専門家まで",
+   "stated_prerequisite": "数学の専門知識がなくても読める",
+   "requires": [
+    "probability",
+    "regression"
+   ],
+   "teaches": [
+    "math_model"
+   ],
+   "confidence": "low",
+   "note": "副題「本質をとらえた分析のために」は省略。前提は推定"
+  },
+  {
+   "title": "プログラミング言語C",
+   "category": "プログラミング",
+   "author": "B.W.カーニハン・D.M.リッチー",
+   "publisher": "共立出版",
+   "year": 1989,
+   "title_basis": "ファイル名の文字数(9文字+C)とまえがき(ANSI規格・第2版)から特定",
+   "evidence": "ANSI規格に沿った第2版",
+   "audience": "Cを学び使いこなしたい人",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "c_lang"
+   ],
+   "confidence": "medium",
+   "note": "第2版の版・出版年は推定"
+  },
+  {
+   "title": "リーダブルコード",
+   "category": "プログラミング",
+   "author": "D.ボズウェル・T.ファウチャー",
+   "publisher": "オライリー・ジャパン",
+   "year": 2012,
+   "title_basis": "ファイル名の文字数(8文字)とまえがきから特定",
+   "evidence": "読みやすいコードの書き方、C++/Python/JavaScript/Java",
+   "audience": "プログラマー全般",
+   "stated_prerequisite": "特定の言語に詳しくなくてよい",
+   "requires": [
+    "py_basic"
+   ],
+   "teaches": [
+    "clean_code"
+   ],
+   "confidence": "high",
+   "note": "まえがきに言語の知識は不要とある"
+  },
+  {
+   "title": "高リスク分野のための機械学習",
+   "category": "機械学習",
+   "author": "P.ホール・J.カーティス・P.パンディ ほか",
+   "publisher": "オライリー・ジャパン",
+   "year": 2025,
+   "title_basis": "ファイル名の文字数(14文字)とWebの書誌情報で特定。正式名は副題「責任あるAI構築のための実践アプローチ」付き",
+   "evidence": "機械学習の責任ある利用とリスク管理、コードはPython",
+   "audience": "機械学習エンジニア・データサイエンティスト",
+   "stated_prerequisite": "(明記なし。機械学習の実務経験を想定)",
+   "requires": [
+    "ml_framework",
+    "model_eval",
+    "py_basic"
+   ],
+   "teaches": [
+    "responsible_ml",
+    "xai"
+   ],
+   "confidence": "low",
+   "note": "前提は序文の想定読者から推定"
+  },
+  {
+   "title": "先輩データサイエンティストからの指南書",
+   "category": "機械学習",
+   "author": "浅野純季・木村真也・田中冬馬・武藤克大・栁泉穂",
+   "publisher": "技術評論社",
+   "year": 2025,
+   "title_basis": "ファイル名の文字数(19文字)とWebの書誌情報で特定。副題「実務で生き抜くためのエンジニアリングスキル」は省略",
+   "evidence": "ジュニア〜ミドル層のデータサイエンティスト向けのエンジニアリング",
+   "audience": "学生・駆け出し〜数年経験のデータサイエンティスト",
+   "stated_prerequisite": "Python、テーブルデータの前処理、機械学習の基本と実装、scikit-learnでのモデル作成",
+   "requires": [
+    "py_basic",
+    "pandas",
+    "sql_basic",
+    "ml_framework"
+   ],
+   "teaches": [
+    "ds_engineering",
+    "mlops"
+   ],
+   "confidence": "high",
+   "note": "まえがきに前提が明記されている"
+  },
+  {
+   "title": "高校数学の演習から理解する機械学習アルゴリズム",
+   "category": "機械学習",
+   "author": "(未確認)",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名のとおり。著者・出版社は未確認",
+   "evidence": "高校数学の演習でニューラルネット・ランダムフォレスト・ミンコフスキー距離を理解する(第2版)",
+   "audience": "高校数学がだいたいわかる人、演習で理解を深めたい人",
+   "stated_prerequisite": "高校数学レベル",
+   "requires": [],
+   "teaches": [
+    "calculus",
+    "vector",
+    "matrix",
+    "neural_net",
+    "decision_tree",
+    "similarity"
+   ],
+   "confidence": "medium",
+   "note": "第2版。著者・出版社を確認したい"
+  },
+  {
+   "title": "達人に学ぶDB設計徹底指南書",
+   "category": "データベース",
+   "author": "ミック",
+   "publisher": "翔泳社",
+   "year": 2024,
+   "title_basis": "ファイル名の文字数(5+DB+7)とまえがきで特定。第2版のまえがき(初版から10年以上)",
+   "evidence": "リレーショナルDBの論理設計と物理設計(AWS前提)",
+   "audience": "DB設計を学びたい人",
+   "stated_prerequisite": "(明記なし)",
+   "requires": [
+    "rdb",
+    "sql_basic"
+   ],
+   "teaches": [
+    "db_design"
+   ],
+   "confidence": "medium",
+   "note": "著者・年はWebの一般情報による推定。要確認"
+  },
+  {
+   "title": "分析者のための行動経済学入門",
+   "category": "統計",
+   "author": "(未確認)",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名のとおり。著者・出版社は未確認",
+   "evidence": "人間行動の理解をデータ分析に活かす。2部構成(基礎と実践)",
+   "audience": "データ分析者",
+   "stated_prerequisite": "経済学の基礎は本書内で説明",
+   "requires": [
+    "desc_stats"
+   ],
+   "teaches": [
+    "behavioral_econ"
+   ],
+   "confidence": "low",
+   "note": "著者・出版社を確認したい"
+  },
+  {
+   "title": "生成AI・ChatGPTでPythonプログラミング",
+   "category": "プログラミング",
+   "author": "(未確認)",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名のとおり",
+   "evidence": "生成AI・ChatGPTの使い方、プロンプト、API、仕様書やテストの自動作成",
+   "audience": "アプリ開発・Webデザインに携わる人、生成AIを実務で使いたい人",
+   "stated_prerequisite": "(明記なし)",
+   "requires": [
+    "generative_ai",
+    "py_basic"
+   ],
+   "teaches": [
+    "genai_programming"
+   ],
+   "confidence": "low",
+   "note": "前提は想定読者から推定"
+  },
+  {
+   "title": "直感的に理解するTransformerの仕組み",
+   "category": "深層学習",
+   "author": "(未確認)",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名のとおり(ファイル名は「Transfomer」と綴りが違う)",
+   "evidence": "Transformerの直感的理解、グラフ理論の視点",
+   "audience": "MLP・CNNなど基本的なDeepLearningの学習の仕組みを押さえている人",
+   "stated_prerequisite": "数学II・Bまでの理解が望ましい",
+   "requires": [
+    "neural_net",
+    "matrix",
+    "seq_models",
+    "calculus"
+   ],
+   "teaches": [
+    "transformer"
+   ],
+   "confidence": "medium",
+   "note": "まえがきに前提が明記されている"
+  },
+  {
+   "title": "機械学習アルゴリズム入門",
+   "category": "機械学習",
+   "author": "申吉浩",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名のとおり。著者はまえがき末尾の署名",
+   "evidence": "データの類似度を軸に機械学習を解説、文系の大学受験程度の数学で読める",
+   "audience": "機械学習を道具でなく原理的に理解して使いたい人",
+   "stated_prerequisite": "文系の大学受験程度の数学",
+   "requires": [],
+   "teaches": [
+    "ml_framework",
+    "similarity",
+    "kernel_svm"
+   ],
+   "confidence": "medium",
+   "note": "出版社・年は未確認"
+  },
+  {
+   "title": "12歳からはじめる ゼロからのPython ゲームプログラミング教室",
+   "category": "プログラミング",
+   "author": "大槻有一郎+リブロワークスPython部",
+   "publisher": "Rutles",
+   "year": 2017,
+   "title_basis": "ユーザー提供のファイル名と表紙のとおり",
+   "evidence": "はじめに: CUIとGUIの違い、イラスト入りのミニゲームをtkinterで作る。日付は2017年3月",
+   "audience": "プログラミング初心者(12歳から)",
+   "stated_prerequisite": "特になし(初心者向け)",
+   "requires": [],
+   "teaches": [
+    "py_basic"
+   ],
+   "confidence": "medium",
+   "note": "年は「はじめに」の日付(2017年3月)から。表紙と「はじめに」で確認"
+  },
+  {
+   "title": "Chainerで学ぶディープラーニング入門",
+   "category": "深層学習",
+   "author": "島田直希・大浦健志",
+   "publisher": "技術評論社",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名と表紙のとおり",
+   "evidence": "序文: ディープラーニングの理論の基礎から解説し、実装時の参考書を目指す。表紙に応用手法の一覧",
+   "audience": "ディープラーニングを基礎から応用まで学びたい人",
+   "stated_prerequisite": "(明記なし。エンジニア・研究者向け)",
+   "requires": [
+    "py_basic",
+    "calculus",
+    "matrix"
+   ],
+   "teaches": [
+    "neural_net",
+    "gradient_descent",
+    "cnn",
+    "image_segmentation",
+    "gan",
+    "deep_rl",
+    "seq_models"
+   ],
+   "confidence": "low",
+   "note": "序文と表紙で確認。前提は推定"
+  },
+  {
+   "title": "Excelでわかるディープラーニング超入門",
+   "category": "深層学習",
+   "author": "涌井良幸・涌井貞美",
+   "publisher": "技術評論社",
+   "year": 2017,
+   "title_basis": "ユーザー提供のファイル名と表紙のとおり",
+   "evidence": "はじめに: Excelのセルでニューラルネットワークの構造を見て、しくみを理解する入門書。日付は2017年12月",
+   "audience": "初めてAIを学ぶ人",
+   "stated_prerequisite": "特になし(Excelを使う)",
+   "requires": [
+    "spreadsheet"
+   ],
+   "teaches": [
+    "neural_net"
+   ],
+   "confidence": "medium",
+   "note": "年は「はじめに」の日付(2017年12月)から。出版年は翌年の可能性あり"
+  },
+  {
+   "title": "Google Cloud AutoML Vision入門",
+   "category": "深層学習",
+   "author": "衛藤剛史",
+   "publisher": "秀和システム",
+   "year": null,
+   "title_basis": "ユーザー提供のファイル名と表紙のとおり",
+   "evidence": "はじめに: 専門知識のないエンジニアでも簡単にAIモデルを作れる時代、難しい数式から入門する必要はない",
+   "audience": "画像認識アプリを作りたい人",
+   "stated_prerequisite": "専門知識は不要",
+   "requires": [
+    "py_basic"
+   ],
+   "teaches": [
+    "automl",
+    "computer_vision"
+   ],
+   "confidence": "low",
+   "note": "はじめにと表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "Minecraftで楽しく学べるPythonプログラミング",
+   "category": "プログラミング",
+   "author": "齋藤大輔",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "表紙の写真のとおり",
+   "evidence": "はじめに: プログラミング未経験者向け、Minecraftで遊びながらPythonの基本文法を学ぶ",
+   "audience": "プログラミング未経験者(高校生以上を想定。それ以下でも可)",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic"
+   ],
+   "confidence": "medium",
+   "note": "はじめにと表紙で確認。出版社・年は未確認"
+  },
+  {
+   "title": "Pythonスタートブック 増補改訂版",
+   "category": "プログラミング",
+   "author": "辻真吾",
+   "publisher": "技術評論社",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "目次: 環境構築から、データ型・繰り返し・関数・ファイル・Webアプリ・データサイエンスの基本(SQL)まで11章",
+   "audience": "プログラミング未経験者",
+   "stated_prerequisite": "特になし(まったくのゼロから)",
+   "requires": [],
+   "teaches": [
+    "py_basic",
+    "file_formats",
+    "web_backend"
+   ],
+   "confidence": "medium",
+   "note": "表紙と目次で確認。出版年は未確認"
+  },
+  {
+   "title": "Pythonチュートリアル 第3版",
+   "category": "プログラミング",
+   "author": "Guido van Rossum(訳: 鴨澤眞夫)",
+   "publisher": "オライリー・ジャパン",
+   "year": 2017,
+   "title_basis": "表紙のとおり",
+   "evidence": "訳者まえがき: Python 3.5.1に対応。初心者にも他言語の経験者にも向く",
+   "audience": "Pythonを一通り読み書きできるようになりたい人",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic"
+   ],
+   "confidence": "medium",
+   "note": "年は訳者まえがきの版(Python 3.5対応)からの推定"
+  },
+  {
+   "title": "Pythonによるはじめての機械学習プログラミング",
+   "category": "機械学習",
+   "author": "島田達朗・越水直人・早川敦士・山田育矢",
+   "publisher": "技術評論社",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに: 理論より先にPythonで手を動かして機械学習に触れる。表紙にJupyterLab・Pandas・scikit-learn・PyTorch",
+   "audience": "機械学習を使ってみたいエンジニア",
+   "stated_prerequisite": "(明記なし)",
+   "requires": [
+    "py_basic"
+   ],
+   "teaches": [
+    "jupyter",
+    "pandas",
+    "ml_framework",
+    "pytorch"
+   ],
+   "confidence": "medium",
+   "note": "はじめにと表紙で確認。前提は推定"
+  },
+  {
+   "title": "PythonユーザのためのJupyter[実践]入門",
+   "category": "プログラミング",
+   "author": "池内孝啓・片柳薫子・岩尾エマはるか・@driller",
+   "publisher": "技術評論社",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "目次: Jupyter Notebookの導入と操作、pandas、Matplotlib、Bokeh、クラウド利用",
+   "audience": "Pythonでデータ分析をする人",
+   "stated_prerequisite": "Python(Anaconda環境)",
+   "requires": [
+    "py_basic"
+   ],
+   "teaches": [
+    "jupyter",
+    "pandas",
+    "data_viz"
+   ],
+   "confidence": "medium",
+   "note": "目次と表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "PyTorchニューラルネットワーク実装ハンドブック",
+   "category": "深層学習",
+   "author": "宮本圭一郎・大川洋平・毛利拓也",
+   "publisher": "秀和システム",
+   "year": null,
+   "title_basis": "表紙のとおり(正式名は「Define by Runによる画像・テキスト解析のための」付き)",
+   "evidence": "はじめに・対象読者: 深層学習の基礎を取得したエンジニア向け。理論の詳細は扱わない。表紙に畳み込み・リカレント・GAN・物体検出",
+   "audience": "画像分類の実装経験があるエンジニア",
+   "stated_prerequisite": "基本的なLinux操作、Pythonの経験、ディープラーニングの画像分類の実装経験",
+   "requires": [
+    "py_basic",
+    "cnn"
+   ],
+   "teaches": [
+    "pytorch",
+    "seq_models",
+    "gan",
+    "computer_vision"
+   ],
+   "confidence": "high",
+   "note": "前提が「はじめに」に明記されている。出版年は未確認"
+  },
+  {
+   "title": "Raspberry Piではじめる機械学習 基礎からディープラーニングまで",
+   "category": "機械学習",
+   "author": "金丸隆志",
+   "publisher": "講談社ブルーバックス",
+   "year": 2018,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに: 機械学習の考え方から、Raspberry Piで動かして学ぶ(2017年末〜2018年の記述)",
+   "audience": "機械学習を手を動かして学びたい人",
+   "stated_prerequisite": "(明記なし)",
+   "requires": [],
+   "teaches": [
+    "ml_framework",
+    "neural_net"
+   ],
+   "confidence": "medium",
+   "note": "年は本文の記述時期からの推定"
+  },
+  {
+   "title": "Unity 2019入門",
+   "category": "プログラミング",
+   "author": "荒川巧也・浅野祐一",
+   "publisher": "SBクリエイティブ",
+   "year": 2019,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに(2019年7月): Unityを始めたい人向け。表紙に、プログラムが分からなくても大丈夫とある",
+   "audience": "Unityを初めて使う人",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "game_dev"
+   ],
+   "confidence": "high",
+   "note": "はじめにの日付と表紙で確認"
+  },
+  {
+   "title": "Unityではじめる機械学習・強化学習 Unity ML-Agents実践ゲームプログラミング",
+   "category": "機械学習",
+   "author": "布留川英一",
+   "publisher": "ボーンデジタル",
+   "year": 2018,
+   "title_basis": "表紙のとおり(布留川英一、ボーンデジタル)",
+   "evidence": "はじめに(2018年7月): Unityで学習環境を作り、強化学習(PPOなど)で人工知能を育てる",
+   "audience": "Unityの経験の有無を問わず、人工知能に興味がある人",
+   "stated_prerequisite": "特になし(Unityを使ったことがなくてもよい)",
+   "requires": [
+    "game_dev"
+   ],
+   "teaches": [
+    "reinforcement_learning"
+   ],
+   "confidence": "high",
+   "note": "表紙とはじめにで確認。年は「はじめに」の2018年7月から"
+  },
+  {
+   "title": "Unityの教科書 Unity 2019完全対応版",
+   "category": "プログラミング",
+   "author": "北村愛実",
+   "publisher": "SBクリエイティブ",
+   "year": 2019,
+   "title_basis": "表紙のとおり(副題「2D&3Dスマートフォンゲーム入門講座」)",
+   "evidence": "はじめに: ゲーム作りの流れを5つのステップで学ぶ。表紙にC#の基礎を解説とある",
+   "audience": "Unityでゲームを作りたい初心者",
+   "stated_prerequisite": "特になし(プログラミングが初めてでもよい)",
+   "requires": [],
+   "teaches": [
+    "game_dev"
+   ],
+   "confidence": "high",
+   "note": "はじめにと表紙で確認。年は「Unity 2019対応」から"
+  },
+  {
+   "title": "ゼロからつくるPython機械学習プログラミング入門",
+   "category": "機械学習",
+   "author": "八谷大岳",
+   "publisher": "講談社(機械学習スタートアップシリーズ)",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "まえがき: 機械学習のフレームワークが普及する前後の開発手順の違い、行列演算など",
+   "audience": "機械学習を学びたい学生・エンジニア",
+   "stated_prerequisite": "(まえがきには明記なし)",
+   "requires": [
+    "py_basic",
+    "matrix"
+   ],
+   "teaches": [
+    "ml_framework",
+    "neural_net"
+   ],
+   "confidence": "low",
+   "note": "前提と習得概念は表紙・まえがきからの推定。出版年は未確認"
+  },
+  {
+   "title": "たのしいRuby 第5版",
+   "category": "プログラミング",
+   "author": "高橋征義・後藤裕蔵(監修: まつもとゆきひろ)",
+   "publisher": "SBクリエイティブ",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに: 学ぶ・たのしむプログラミング。プログラミングが初めての人にも向く",
+   "audience": "プログラミングが初めての人",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "ruby_basic"
+   ],
+   "confidence": "high",
+   "note": "はじめにに「まったくの初心者」向けと読める記述"
+  },
+  {
+   "title": "たのしいプログラミング Pythonではじめよう!",
+   "category": "プログラミング",
+   "author": "Jason R. Briggs(訳: 磯蘭水・藤永奈保子・鈴木悠)",
+   "publisher": "オーム社",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "訳者まえがき: Pythonを通して、プログラムを書くとはどういうことかを紹介する",
+   "audience": "プログラミング未経験者(子どもから)",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic"
+   ],
+   "confidence": "high",
+   "note": "訳者まえがきと表紙で確認。原書はPython for Kids"
+  },
+  {
+   "title": "データサイエンス超入門",
+   "category": "統計",
+   "author": "工藤卓哉・保科学世",
+   "publisher": "日経BP社",
+   "year": null,
+   "title_basis": "表紙のとおり(副題「ビジネスで役立つ『統計学』の本当の活かし方」)",
+   "evidence": "はじめに: ビジネスパーソン向けに、データサイエンスの基礎知識を身につけ意思決定を最適化する一助にする。表紙に統計学の活かし方",
+   "audience": "データ活用に取り組むビジネスパーソン",
+   "stated_prerequisite": "特になし(統計学に基づいたデータ分析の基礎知識を俯瞰できる)",
+   "requires": [],
+   "teaches": [
+    "ds_cycle",
+    "desc_stats",
+    "regression"
+   ],
+   "confidence": "medium",
+   "note": "はじめにと表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "データサイエンティストのためのデータベース基礎",
+   "category": "データベース",
+   "author": "増永良文",
+   "publisher": "サイエンス社(ライブラリ データサイエンス講義ノート 7)",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに・目次: 全14章。データ資源管理、データ分析基盤、DWH、リレーショナルDB、SQL(基本・OLAP)、ビッグデータとNoSQL",
+   "audience": "データサイエンティスト、データ分析に携わる人",
+   "stated_prerequisite": "(明記なし)",
+   "requires": [],
+   "teaches": [
+    "data_mgmt",
+    "rdb",
+    "sql_basic",
+    "sql_adv"
+   ],
+   "confidence": "medium",
+   "note": "目次から習得概念を推定。出版年は未確認"
+  },
+  {
+   "title": "いちばんやさしいディープラーニング入門教室",
+   "category": "深層学習",
+   "author": "谷岡広樹・康鑫",
+   "publisher": "(未確認)",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに: ニューラルネットワークの理論と、フレームワークを使った実装を体験しながら学ぶ。高校生でも読める本を目指す。表紙にTensorFlow・Keras、文字認識・画像認識・自然言語処理",
+   "audience": "ディープラーニングを学びたい大学生・社会人・エンジニア",
+   "stated_prerequisite": "特になし(基礎数学は本書でフォロー)",
+   "requires": [
+    "py_basic"
+   ],
+   "teaches": [
+    "neural_net",
+    "cnn",
+    "text_classification"
+   ],
+   "confidence": "high",
+   "note": "はじめにと表紙で確認。出版社・年は未確認"
+  },
+  {
+   "title": "画像認識",
+   "category": "深層学習",
+   "author": "原田達也",
+   "publisher": "講談社(機械学習プロフェッショナルシリーズ)",
+   "year": 2017,
+   "title_basis": "表紙のとおり",
+   "evidence": "まえがき(2017年4月): 画像認識の処理手順(局所特徴・統計的特徴抽出・コーディング・分類)、畳み込みニューラルネットワーク、物体検出、セマンティックセグメンテーション",
+   "audience": "画像認識を体系的に学びたい人(プロフェッショナル向けシリーズ)",
+   "stated_prerequisite": "(明記なし)",
+   "requires": [
+    "ml_framework",
+    "linear_algebra"
+   ],
+   "teaches": [
+    "computer_vision",
+    "image_processing",
+    "cnn",
+    "image_segmentation"
+   ],
+   "confidence": "medium",
+   "note": "前提は推定。年はまえがきの日付"
+  },
+  {
+   "title": "確かな力が身につくPython「超」入門",
+   "category": "プログラミング",
+   "author": "鎌田正浩",
+   "publisher": "SBクリエイティブ",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに: プログラミング未経験でも、Pythonで楽しさを感じられるように構成。表紙にまったくのプログラミング未経験でも大丈夫とある",
+   "audience": "プログラミング未経験者",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic"
+   ],
+   "confidence": "high",
+   "note": "はじめにと表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "基礎Python",
+   "category": "プログラミング",
+   "author": "大津真",
+   "publisher": "インプレス(KISO SERIES)",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "本書の読み方: プログラミングの前提知識は不要。環境構築、基礎文法、制御構文など。表紙にPython 3.5対応",
+   "audience": "プログラミング初心者",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic",
+    "dev_env"
+   ],
+   "confidence": "high",
+   "note": "本書の読み方と表紙で確認。出版年は未確認(Python 3.5対応)"
+  },
+  {
+   "title": "Unity 2019逆引き大全 319の極意",
+   "category": "プログラミング",
+   "author": "薬師寺国安",
+   "publisher": "秀和システム",
+   "year": 2019,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに(令和元年6月): Unity 2019.1に基づく極意319個。HDRP・Visual Effect Graphも扱う",
+   "audience": "Unityでゲーム開発をしている人",
+   "stated_prerequisite": "(Unityの基本操作を想定)",
+   "requires": [
+    "game_dev"
+   ],
+   "teaches": [
+    "game_dev"
+   ],
+   "confidence": "medium",
+   "note": "辞書形式のため前提は推定"
+  },
+  {
+   "title": "つくって学ぶProcessingプログラミング入門 Python版",
+   "category": "プログラミング",
+   "author": "長名優子・石畑宏明・菊池眞之",
+   "publisher": "コロナ社",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "まえがき: プログラミング初学者向け。Processingのpythonモードでビジュアルに確認しながら学ぶ。理系大学初年度程度の知識",
+   "audience": "プログラミング初学者(大学初年度)",
+   "stated_prerequisite": "理系の大学初年度程度の知識(高校生でもある程度可)",
+   "requires": [],
+   "teaches": [
+    "py_basic",
+    "creative_coding"
+   ],
+   "confidence": "high",
+   "note": "まえがきで確認。出版年は未確認"
+  },
+  {
+   "title": "作って学べるUnity VRアプリ開発入門",
+   "category": "プログラミング",
+   "author": "河野修弘・松島寛樹・大嶋剛直",
+   "publisher": "技術評論社",
+   "year": 2018,
+   "title_basis": "表紙のとおり",
+   "evidence": "はじめに(2018年8月): Unityでスマートフォン向けVRゲーム・アプリ開発を学ぶ入門書",
+   "audience": "Unityやゲーム開発、VRに興味がある人",
+   "stated_prerequisite": "特になし(Unityの基礎から説明)",
+   "requires": [],
+   "teaches": [
+    "game_dev"
+   ],
+   "confidence": "high",
+   "note": "はじめにの日付と表紙で確認"
+  },
+  {
+   "title": "図解入門 よくわかる最新機械学習の基本と仕組み",
+   "category": "機械学習",
+   "author": "長橋賢吾",
+   "publisher": "秀和システム",
+   "year": null,
+   "title_basis": "表紙のとおり(副題「数学が苦手でも理解できる人工知能の基礎」)",
+   "evidence": "はじめに: 機械学習の概要、回帰、クラスタリング、主成分分析、SVM・決定木、ディープラーニングの基礎と応用、Pythonのハンズオン(全8章)",
+   "audience": "機械学習・ディープラーニングを分かりやすく知りたい人",
+   "stated_prerequisite": "(数学が苦手でもよい)",
+   "requires": [],
+   "teaches": [
+    "ml_framework",
+    "regression",
+    "clustering",
+    "dim_reduction",
+    "kernel_svm",
+    "decision_tree",
+    "neural_net"
+   ],
+   "confidence": "medium",
+   "note": "はじめにと表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "退屈なことはPythonにやらせよう",
+   "category": "プログラミング",
+   "author": "Al Sweigart(訳: 相川愛三)",
+   "publisher": "オライリー・ジャパン",
+   "year": null,
+   "title_basis": "表紙のとおり(副題「ノンプログラマーにもできる自動化処理プログラミング」)",
+   "evidence": "訳者まえがき: まったくの初心者にも分かるよう基本文法から説明。Word・Excel・PDF・Web・メールなどの作業を自動化",
+   "audience": "ノンプログラマー・初心者",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic",
+    "file_formats"
+   ],
+   "confidence": "high",
+   "note": "訳者まえがきと表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "入門 Python 3",
+   "category": "プログラミング",
+   "author": "Bill Lubanovic(監訳: 斎藤康毅、訳: 長尾高弘)",
+   "publisher": "オライリー・ジャパン",
+   "year": null,
+   "title_basis": "表紙のとおり",
+   "evidence": "監訳者まえがき: プログラミング経験のない初学者や、経験はあるがPythonは初めての人向けの実践的な入門書",
+   "audience": "Python初学者",
+   "stated_prerequisite": "特になし",
+   "requires": [],
+   "teaches": [
+    "py_basic"
+   ],
+   "confidence": "high",
+   "note": "監訳者まえがきと表紙で確認。出版年は未確認"
+  },
+  {
+   "title": "マンガでわかる機械学習",
+   "category": "機械学習",
+   "author": "荒木雅弘",
+   "publisher": "オーム社",
+   "year": 2018,
+   "title_basis": "表紙のとおり",
+   "evidence": "まえがき(2018年7月): 線形回帰、ロジスティック識別・決定木、交差確認法、畳み込みニューラルネットワーク、アンサンブル学習、クラスタリング・行列分解。対象は大学初年次程度の数学の知識がある初学者",
+   "audience": "機械学習の初学者",
+   "stated_prerequisite": "大学初年次程度の数学の知識(数式は読み飛ばしても可)",
+   "requires": [
+    "calculus"
+   ],
+   "teaches": [
+    "ml_framework",
+    "regression",
+    "decision_tree",
+    "model_eval",
+    "cnn",
+    "clustering"
+   ],
+   "confidence": "high",
+   "note": "まえがきの対応表と日付で確認"
+  }
+ ]
+}

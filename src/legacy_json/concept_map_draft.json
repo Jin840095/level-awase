@@ -1,0 +1,1399 @@
+{
+ "_note": "AIによる下書き。公開前に人が検証すること。シラバス本文は含めず、授業名と概念タグのみ保持。",
+ "concepts": [
+  {
+   "id": "py_basic",
+   "name": "Python基礎文法",
+   "category": "プログラミング",
+   "requires": []
+  },
+  {
+   "id": "dev_env",
+   "name": "開発環境(Unix・VS Code・Colab/Jupyter)",
+   "category": "プログラミング",
+   "requires": []
+  },
+  {
+   "id": "git",
+   "name": "バージョン管理(Git/GitHub)",
+   "category": "プログラミング",
+   "requires": [
+    "dev_env"
+   ]
+  },
+  {
+   "id": "creative_coding",
+   "name": "図形描画・インタラクティブ処理",
+   "category": "プログラミング",
+   "requires": [
+    "py_basic"
+   ]
+  },
+  {
+   "id": "spreadsheet",
+   "name": "表計算(関数・集計)",
+   "category": "データ処理",
+   "requires": []
+  },
+  {
+   "id": "file_formats",
+   "name": "CSV/JSONの読み書き",
+   "category": "データ処理",
+   "requires": [
+    "py_basic"
+   ]
+  },
+  {
+   "id": "pandas",
+   "name": "pandasによるデータ処理",
+   "category": "データ処理",
+   "requires": [
+    "py_basic",
+    "file_formats"
+   ]
+  },
+  {
+   "id": "data_cleaning",
+   "name": "データ前処理(欠損値・クレンジング)",
+   "category": "データ処理",
+   "requires": [
+    "pandas"
+   ]
+  },
+  {
+   "id": "timeseries",
+   "name": "時系列データ",
+   "category": "データ処理",
+   "requires": [
+    "pandas"
+   ]
+  },
+  {
+   "id": "sensing",
+   "name": "センサ・IoTによるデータ取得",
+   "category": "データ処理",
+   "requires": [
+    "py_basic"
+   ]
+  },
+  {
+   "id": "open_data",
+   "name": "オープンデータの活用",
+   "category": "データ処理",
+   "requires": []
+  },
+  {
+   "id": "data_types",
+   "name": "データの型と尺度",
+   "category": "統計",
+   "requires": []
+  },
+  {
+   "id": "data_viz",
+   "name": "データ可視化(ヒストグラム・棒・折れ線・散布図)",
+   "category": "統計",
+   "requires": [
+    "data_types"
+   ]
+  },
+  {
+   "id": "desc_stats",
+   "name": "記述統計(平均・分散・標準偏差)",
+   "category": "統計",
+   "requires": [
+    "data_types"
+   ]
+  },
+  {
+   "id": "inferential",
+   "name": "推測統計(母集団と標本)",
+   "category": "統計",
+   "requires": [
+    "desc_stats"
+   ]
+  },
+  {
+   "id": "correlation",
+   "name": "相関と因果",
+   "category": "統計",
+   "requires": [
+    "desc_stats"
+   ]
+  },
+  {
+   "id": "hypothesis_test",
+   "name": "統計的検定",
+   "category": "統計",
+   "requires": [
+    "inferential"
+   ]
+  },
+  {
+   "id": "survey",
+   "name": "アンケート設計・評定尺度法",
+   "category": "統計",
+   "requires": [
+    "desc_stats"
+   ]
+  },
+  {
+   "id": "probability",
+   "name": "確率(確率変数・確率分布・大数の法則)",
+   "category": "数学",
+   "requires": []
+  },
+  {
+   "id": "vector",
+   "name": "ベクトル(ノルム・距離・内積)",
+   "category": "数学",
+   "requires": []
+  },
+  {
+   "id": "matrix",
+   "name": "行列の演算",
+   "category": "数学",
+   "requires": [
+    "vector"
+   ]
+  },
+  {
+   "id": "linear_algebra",
+   "name": "線形代数(連立一次方程式・逆行列・行列式)",
+   "category": "数学",
+   "requires": [
+    "matrix"
+   ]
+  },
+  {
+   "id": "eigen",
+   "name": "固有値分解",
+   "category": "数学",
+   "requires": [
+    "linear_algebra"
+   ]
+  },
+  {
+   "id": "information_theory",
+   "name": "情報量・エントロピー(KL/JS情報量)",
+   "category": "数学",
+   "requires": [
+    "probability"
+   ]
+  },
+  {
+   "id": "binary",
+   "name": "二進数・情報量の単位",
+   "category": "情報基礎",
+   "requires": []
+  },
+  {
+   "id": "signal",
+   "name": "標本化定理・FFT",
+   "category": "数学",
+   "requires": [
+    "timeseries"
+   ]
+  },
+  {
+   "id": "image_processing",
+   "name": "画像処理(畳み込み・フィルタ)",
+   "category": "数学",
+   "requires": [
+    "matrix"
+   ]
+  },
+  {
+   "id": "rdb",
+   "name": "リレーショナルDBの基礎(関係代数)",
+   "category": "データベース",
+   "requires": []
+  },
+  {
+   "id": "sql_basic",
+   "name": "SQL基礎(CRUD・WHERE・ORDER)",
+   "category": "データベース",
+   "requires": [
+    "rdb"
+   ]
+  },
+  {
+   "id": "sql_adv",
+   "name": "SQL応用(JOIN・GROUP BY・サブクエリ・VIEW)",
+   "category": "データベース",
+   "requires": [
+    "sql_basic"
+   ]
+  },
+  {
+   "id": "db_design",
+   "name": "DB設計(ER図・正規化・キー制約)",
+   "category": "データベース",
+   "requires": [
+    "sql_basic"
+   ]
+  },
+  {
+   "id": "db_programming",
+   "name": "DBプログラミング(PL/pgSQL・トリガー)",
+   "category": "データベース",
+   "requires": [
+    "sql_adv"
+   ]
+  },
+  {
+   "id": "db_python",
+   "name": "PythonとDBの連携",
+   "category": "データベース",
+   "requires": [
+    "sql_basic",
+    "pandas"
+   ]
+  },
+  {
+   "id": "db_concurrency",
+   "name": "排他制御(デッドロック・競合状態)",
+   "category": "データベース",
+   "requires": [
+    "db_python"
+   ]
+  },
+  {
+   "id": "ml_framework",
+   "name": "機械学習の基本枠組み(特徴量・学習・評価)",
+   "category": "機械学習",
+   "requires": [
+    "py_basic",
+    "desc_stats"
+   ]
+  },
+  {
+   "id": "similarity",
+   "name": "類似度・距離(ユークリッド・L1・コサイン)",
+   "category": "機械学習",
+   "requires": [
+    "vector"
+   ]
+  },
+  {
+   "id": "normalization",
+   "name": "正規化(L1/L2)",
+   "category": "機械学習",
+   "requires": [
+    "vector"
+   ]
+  },
+  {
+   "id": "knn",
+   "name": "k近傍法",
+   "category": "機械学習",
+   "requires": [
+    "similarity",
+    "ml_framework"
+   ]
+  },
+  {
+   "id": "model_eval",
+   "name": "モデル評価(交差検証・混同行列・F値)",
+   "category": "機械学習",
+   "requires": [
+    "ml_framework"
+   ]
+  },
+  {
+   "id": "dim_reduction",
+   "name": "次元圧縮",
+   "category": "機械学習",
+   "requires": [
+    "linear_algebra"
+   ]
+  },
+  {
+   "id": "kernel_svm",
+   "name": "カーネル関数とSVM",
+   "category": "機械学習",
+   "requires": [
+    "similarity",
+    "knn"
+   ]
+  },
+  {
+   "id": "clustering",
+   "name": "クラスタリング",
+   "category": "機械学習",
+   "requires": [
+    "similarity"
+   ]
+  },
+  {
+   "id": "morph",
+   "name": "形態素解析・テキスト前処理",
+   "category": "自然言語処理",
+   "requires": [
+    "py_basic"
+   ]
+  },
+  {
+   "id": "tfidf",
+   "name": "テキストのベクトル化(単語頻度・TF-IDF)",
+   "category": "自然言語処理",
+   "requires": [
+    "morph",
+    "vector"
+   ]
+  },
+  {
+   "id": "nlp_tools",
+   "name": "NLPライブラリ(NLTK・spaCy・gensim)",
+   "category": "自然言語処理",
+   "requires": [
+    "morph"
+   ]
+  },
+  {
+   "id": "word_embedding",
+   "name": "単語・文書埋め込み(Word2Vec/Doc2Vec)",
+   "category": "自然言語処理",
+   "requires": [
+    "tfidf"
+   ]
+  },
+  {
+   "id": "text_classification",
+   "name": "テキスト分類",
+   "category": "自然言語処理",
+   "requires": [
+    "tfidf",
+    "knn"
+   ]
+  },
+  {
+   "id": "info_retrieval",
+   "name": "情報検索",
+   "category": "自然言語処理",
+   "requires": [
+    "tfidf"
+   ]
+  },
+  {
+   "id": "info_extraction",
+   "name": "情報抽出(固有表現抽出)",
+   "category": "自然言語処理",
+   "requires": [
+    "nlp_tools"
+   ]
+  },
+  {
+   "id": "ai_overview",
+   "name": "AI概論(歴史・できること)",
+   "category": "AIと社会",
+   "requires": []
+  },
+  {
+   "id": "generative_ai",
+   "name": "生成AI・プロンプト",
+   "category": "AIと社会",
+   "requires": []
+  },
+  {
+   "id": "ai_ethics",
+   "name": "AI倫理・情報セキュリティ・プライバシー",
+   "category": "AIと社会",
+   "requires": []
+  },
+  {
+   "id": "computer_basics",
+   "name": "コンピュータ・ネットワークの基礎",
+   "category": "情報基礎",
+   "requires": []
+  },
+  {
+   "id": "ds_cycle",
+   "name": "データサイエンスの流れと活用事例",
+   "category": "AIと社会",
+   "requires": []
+  },
+  {
+   "id": "calculus",
+   "name": "微分積分(微分・積分・三角関数)",
+   "category": "数学",
+   "requires": []
+  },
+  {
+   "id": "gradient_descent",
+   "name": "勾配降下法",
+   "category": "数学",
+   "requires": [
+    "calculus"
+   ]
+  },
+  {
+   "id": "fourier",
+   "name": "フーリエ級数・フーリエ変換",
+   "category": "数学",
+   "requires": [
+    "calculus"
+   ]
+  },
+  {
+   "id": "diff_eq",
+   "name": "微分方程式とシミュレーション",
+   "category": "数学",
+   "requires": [
+    "calculus"
+   ]
+  },
+  {
+   "id": "normal_dist",
+   "name": "正規分布・中心極限定理",
+   "category": "統計",
+   "requires": [
+    "probability",
+    "desc_stats"
+   ]
+  },
+  {
+   "id": "regression",
+   "name": "回帰分析(単回帰・重回帰・最小二乗法)",
+   "category": "統計",
+   "requires": [
+    "correlation"
+   ]
+  },
+  {
+   "id": "bayes",
+   "name": "ベイズ統計(ベイズの定理・ベイジアンネットワーク)",
+   "category": "統計",
+   "requires": [
+    "probability"
+   ]
+  },
+  {
+   "id": "mcmc",
+   "name": "MCMC・確率的プログラミング(PyMC)",
+   "category": "統計",
+   "requires": [
+    "bayes",
+    "py_basic"
+   ]
+  },
+  {
+   "id": "neural_net",
+   "name": "ニューラルネット基礎(パーセプトロン・損失関数・誤差逆伝播)",
+   "category": "深層学習",
+   "requires": [
+    "ml_framework",
+    "gradient_descent"
+   ]
+  },
+  {
+   "id": "pytorch",
+   "name": "PyTorchによるモデル実装",
+   "category": "深層学習",
+   "requires": [
+    "py_basic",
+    "neural_net"
+   ]
+  },
+  {
+   "id": "cnn",
+   "name": "畳み込みニューラルネット(CNN)・画像分類",
+   "category": "深層学習",
+   "requires": [
+    "neural_net",
+    "image_processing"
+   ]
+  },
+  {
+   "id": "seq_models",
+   "name": "RNN・LSTM・Transformer・ViT",
+   "category": "深層学習",
+   "requires": [
+    "neural_net"
+   ]
+  },
+  {
+   "id": "transfer_learning",
+   "name": "転移学習・ファインチューニング",
+   "category": "深層学習",
+   "requires": [
+    "cnn",
+    "pytorch"
+   ]
+  },
+  {
+   "id": "mlops",
+   "name": "MLOps(MLflowによる実験管理)",
+   "category": "深層学習",
+   "requires": [
+    "pytorch"
+   ]
+  },
+  {
+   "id": "web_front",
+   "name": "Webフロント(HTML・CSS・JavaScript)",
+   "category": "Web開発",
+   "requires": []
+  },
+  {
+   "id": "web_backend",
+   "name": "Webアプリ開発(Flask・FastAPI・PHP・HTTP)",
+   "category": "Web開発",
+   "requires": [
+    "py_basic",
+    "web_front"
+   ]
+  },
+  {
+   "id": "web_security",
+   "name": "Webセキュリティ(認証・セッション・XSS・SQLインジェクション)",
+   "category": "Web開発",
+   "requires": [
+    "web_backend"
+   ]
+  },
+  {
+   "id": "docker_deploy",
+   "name": "Docker・クラウドによるデプロイ",
+   "category": "Web開発",
+   "requires": [
+    "web_backend",
+    "dev_env"
+   ]
+  },
+  {
+   "id": "geo",
+   "name": "地理空間情報(位置情報・GIS・地図サービス)",
+   "category": "Web開発",
+   "requires": []
+  },
+  {
+   "id": "cps",
+   "name": "サイバーフィジカルシステム(センシング・アクチュエーション)",
+   "category": "情報基礎",
+   "requires": []
+  },
+  {
+   "id": "graph_search",
+   "name": "グラフと探索(DFS・BFS・ダイクストラ)",
+   "category": "アルゴリズム",
+   "requires": [
+    "py_basic"
+   ]
+  },
+  {
+   "id": "optimization",
+   "name": "最適化アルゴリズム(動的計画法・遺伝的アルゴリズム・群知能)",
+   "category": "アルゴリズム",
+   "requires": [
+    "graph_search"
+   ]
+  },
+  {
+   "id": "decision_tree",
+   "name": "決定木・ランダムフォレスト",
+   "category": "機械学習",
+   "requires": [
+    "ml_framework"
+   ]
+  },
+  {
+   "id": "association_rules",
+   "name": "頻出パターン・相関ルール抽出",
+   "category": "機械学習",
+   "requires": [
+    "pandas"
+   ]
+  },
+  {
+   "id": "anomaly_detection",
+   "name": "異常検知",
+   "category": "機械学習",
+   "requires": [
+    "ml_framework",
+    "normal_dist"
+   ]
+  },
+  {
+   "id": "xai",
+   "name": "説明可能なAI(XAI)",
+   "category": "機械学習",
+   "requires": [
+    "ml_framework"
+   ]
+  },
+  {
+   "id": "computer_vision",
+   "name": "画像認識・物体検出(OpenCV)",
+   "category": "深層学習",
+   "requires": [
+    "image_processing",
+    "knn"
+   ]
+  },
+  {
+   "id": "speech_recognition",
+   "name": "音声認識(スペクトル解析・MFCC・HMM)",
+   "category": "深層学習",
+   "requires": [
+    "signal",
+    "fourier"
+   ]
+  },
+  {
+   "id": "spatiotemporal_db",
+   "name": "空間・時間データベース",
+   "category": "データベース",
+   "requires": [
+    "db_design"
+   ]
+  },
+  {
+   "id": "robotics",
+   "name": "ロボティクス・IoT(アーム制御)",
+   "category": "情報基礎",
+   "requires": [
+    "cps"
+   ]
+  },
+  {
+   "id": "cybersecurity",
+   "name": "サイバーセキュリティ(AIとの関係)",
+   "category": "AIと社会",
+   "requires": []
+  },
+  {
+   "id": "simulation",
+   "name": "シミュレーション(モンテカルロ・離散イベント・マルチエージェント)",
+   "category": "アルゴリズム",
+   "requires": [
+    "py_basic",
+    "probability"
+   ]
+  },
+  {
+   "id": "computer_architecture",
+   "name": "コンピュータの仕組み(CPU・メモリ・機械語・メモリ階層)",
+   "category": "情報基礎",
+   "requires": [
+    "binary",
+    "computer_basics"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "sw_practice",
+   "name": "ソフトウェア開発の実践(設計・保守・生産性の考え方)",
+   "category": "プログラミング",
+   "requires": [
+    "py_basic"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "eval_metrics",
+   "name": "評価指標の設計(ビジネス課題とモデル評価の接続)",
+   "category": "機械学習",
+   "requires": [
+    "model_eval",
+    "ml_framework"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "r_lang",
+   "name": "R言語の基礎(データの読み込み・基本の関数)",
+   "category": "プログラミング",
+   "requires": [],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "english_basic",
+   "name": "英文法の基礎(論文を1文ずつ読める力)",
+   "category": "リテラシー",
+   "requires": [],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "paper_reading",
+   "name": "論文の読み方(構成と読む順番)",
+   "category": "リテラシー",
+   "requires": [
+    "english_basic"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "gan",
+   "name": "生成モデル(GAN・DCGAN・CycleGAN)",
+   "category": "深層学習",
+   "requires": [
+    "cnn"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "image_segmentation",
+   "name": "画像セグメンテーション(FCN・U-Net・PSPNet)",
+   "category": "深層学習",
+   "requires": [
+    "cnn"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "ml_competition",
+   "name": "機械学習コンテストの進め方(Kaggle)",
+   "category": "機械学習",
+   "requires": [
+    "ml_framework",
+    "model_eval"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "gnn",
+   "name": "グラフニューラルネットワーク(グラフ埋め込み・グラフ畳み込み)",
+   "category": "深層学習",
+   "requires": [
+    "neural_net",
+    "matrix"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "autodiff",
+   "name": "自動微分と計算グラフ(フレームワークのしくみ)",
+   "category": "深層学習",
+   "requires": [
+    "neural_net",
+    "py_basic"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "reinforcement_learning",
+   "name": "強化学習の基礎(方策・価値・ベルマン方程式)",
+   "category": "機械学習",
+   "requires": [
+    "probability",
+    "py_basic"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "deep_rl",
+   "name": "深層強化学習(DQN・方策勾配)",
+   "category": "深層学習",
+   "requires": [
+    "reinforcement_learning",
+    "neural_net"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "diffusion",
+   "name": "生成モデル(VAE・拡散モデル)",
+   "category": "深層学習",
+   "requires": [
+    "probability",
+    "normal_dist",
+    "neural_net"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "llm",
+   "name": "大規模言語モデル(Transformer・学習と応用)",
+   "category": "深層学習",
+   "requires": [
+    "seq_models",
+    "pytorch",
+    "neural_net"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "math_model",
+   "name": "数理モデルによるデータ分析",
+   "category": "統計",
+   "requires": [
+    "probability",
+    "regression"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "c_lang",
+   "name": "C言語の基礎(ポインタ・標準ライブラリ)",
+   "category": "プログラミング",
+   "requires": [],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "clean_code",
+   "name": "読みやすいコードの書き方",
+   "category": "プログラミング",
+   "requires": [
+    "py_basic"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "responsible_ml",
+   "name": "責任ある機械学習(バイアス・プライバシー・セキュリティのリスク管理)",
+   "category": "機械学習",
+   "requires": [
+    "model_eval",
+    "xai"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "ds_engineering",
+   "name": "データサイエンスの実務エンジニアリング(品質確認・前処理・運用)",
+   "category": "機械学習",
+   "requires": [
+    "py_basic",
+    "sql_basic",
+    "pandas",
+    "ml_framework"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "behavioral_econ",
+   "name": "行動経済学(プロスペクト理論・ナッジ)",
+   "category": "統計",
+   "requires": [
+    "desc_stats"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "genai_programming",
+   "name": "生成AIとプログラミング(プロンプト・ChatGPT API・コード生成)",
+   "category": "AIと社会",
+   "requires": [
+    "generative_ai",
+    "py_basic"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "transformer",
+   "name": "Transformerの仕組み(注意機構・グラフ的な見方)",
+   "category": "深層学習",
+   "requires": [
+    "neural_net",
+    "matrix",
+    "seq_models"
+   ],
+   "source": "本のまえがきから追加"
+  },
+  {
+   "id": "automl",
+   "name": "AutoMLによる画像分類(コードを書かずにモデルを作る)",
+   "category": "深層学習",
+   "requires": [
+    "computer_vision"
+   ],
+   "source": "本の表紙から追加"
+  },
+  {
+   "id": "jupyter",
+   "name": "Jupyter Notebookの使い方",
+   "category": "プログラミング",
+   "requires": [
+    "py_basic"
+   ],
+   "source": "本の表紙・目次から追加"
+  },
+  {
+   "id": "game_dev",
+   "name": "Unityによるゲーム制作の基本",
+   "category": "プログラミング",
+   "requires": [],
+   "source": "本の表紙・はじめにから追加"
+  },
+  {
+   "id": "ruby_basic",
+   "name": "Rubyの基礎(オブジェクト・メソッド・制御構造)",
+   "category": "プログラミング",
+   "requires": [],
+   "source": "本の表紙・はじめにから追加"
+  },
+  {
+   "id": "data_mgmt",
+   "name": "データマネジメントとデータ分析基盤(DWH・データレイク)",
+   "category": "データベース",
+   "requires": [],
+   "source": "本の目次から追加"
+  }
+ ],
+ "courses": [
+  {
+   "name": "データサイエンス基礎",
+   "code": "SIC 101",
+   "teaches": [
+    "spreadsheet",
+    "data_types",
+    "desc_stats",
+    "inferential",
+    "correlation",
+    "data_viz",
+    "ds_cycle",
+    "ai_ethics"
+   ],
+   "year": 1
+  },
+  {
+   "name": "人工知能基礎",
+   "code": "SIC 102",
+   "teaches": [
+    "computer_basics",
+    "binary",
+    "ai_overview",
+    "generative_ai",
+    "ai_ethics"
+   ],
+   "year": 1
+  },
+  {
+   "name": "データサイエンス学",
+   "code": "DS 101",
+   "teaches": [
+    "ds_cycle",
+    "desc_stats",
+    "inferential",
+    "correlation",
+    "data_viz"
+   ],
+   "note": "オムニバス講義。統計の回のみ概念化",
+   "year": 1
+  },
+  {
+   "name": "人類と人工知能(AI)",
+   "code": "INFO 141",
+   "teaches": [
+    "ai_overview",
+    "ds_cycle",
+    "open_data",
+    "data_cleaning",
+    "timeseries"
+   ],
+   "year": 1
+  },
+  {
+   "name": "メディアクリエーション・データデザインⅠ",
+   "code": "CS 101",
+   "teaches": [
+    "py_basic",
+    "dev_env",
+    "creative_coding",
+    "sensing",
+    "file_formats",
+    "timeseries",
+    "signal"
+   ],
+   "year": 1
+  },
+  {
+   "name": "メディアクリエーション・データデザインⅡ",
+   "code": "CS 102",
+   "teaches": [
+    "sensing",
+    "survey",
+    "desc_stats",
+    "hypothesis_test",
+    "data_viz"
+   ],
+   "year": 1
+  },
+  {
+   "name": "データサイエンスプログラミングⅠ",
+   "code": "INFO 101",
+   "teaches": [
+    "dev_env",
+    "git",
+    "file_formats",
+    "pandas",
+    "data_cleaning",
+    "data_viz",
+    "timeseries"
+   ],
+   "year": 1
+  },
+  {
+   "name": "データベースデザイン",
+   "code": "INFO 302(マップ上はINFO 151)",
+   "teaches": [
+    "rdb",
+    "sql_basic",
+    "sql_adv",
+    "db_design",
+    "db_programming",
+    "db_python",
+    "db_concurrency"
+   ],
+   "year": 1
+  },
+  {
+   "name": "データと数理Ⅰ",
+   "code": "INFO 211",
+   "teaches": [
+    "vector",
+    "matrix",
+    "linear_algebra",
+    "eigen",
+    "image_processing"
+   ],
+   "year": 2
+  },
+  {
+   "name": "機械学習デザインⅠ",
+   "code": "INFO 201",
+   "teaches": [
+    "dev_env",
+    "morph",
+    "ml_framework",
+    "similarity",
+    "normalization",
+    "knn",
+    "model_eval",
+    "dim_reduction",
+    "probability",
+    "information_theory",
+    "kernel_svm"
+   ],
+   "year": 2
+  },
+  {
+   "name": "テキストマイニング",
+   "code": "INFO 322(マップ上はINFO 213)",
+   "teaches": [
+    "morph",
+    "nlp_tools",
+    "tfidf",
+    "similarity",
+    "text_classification",
+    "word_embedding",
+    "info_retrieval",
+    "clustering",
+    "info_extraction"
+   ],
+   "year": 2
+  },
+  {
+   "name": "時空間データベース",
+   "code": "INFO 303(マップ上はINFO 223)",
+   "year": 2,
+   "teaches": [
+    "web_front",
+    "web_backend",
+    "sql_basic",
+    "geo"
+   ]
+  },
+  {
+   "name": "機械学習デザインⅡ",
+   "code": "INFO 202",
+   "year": 2,
+   "teaches": [
+    "neural_net",
+    "gradient_descent",
+    "cnn",
+    "seq_models"
+   ]
+  },
+  {
+   "name": "データと経済統計",
+   "code": "ECO 201",
+   "year": 2,
+   "teaches": [
+    "data_types",
+    "desc_stats",
+    "normal_dist",
+    "correlation",
+    "regression",
+    "inferential",
+    "hypothesis_test"
+   ]
+  },
+  {
+   "name": "Webエンジニアリングと社会",
+   "code": "INFO 206",
+   "year": 2,
+   "teaches": [
+    "web_front",
+    "web_backend",
+    "web_security",
+    "sql_basic",
+    "db_python",
+    "docker_deploy",
+    "dev_env"
+   ]
+  },
+  {
+   "name": "人工知能(AI)テクノロジデザインⅠ",
+   "code": "INFO 203",
+   "year": 2,
+   "teaches": [
+    "pytorch",
+    "neural_net",
+    "cnn",
+    "seq_models",
+    "transfer_learning"
+   ]
+  },
+  {
+   "name": "人工知能(AI)テクノロジデザインⅡ",
+   "code": "INFO 204",
+   "year": 2,
+   "teaches": [
+    "transfer_learning",
+    "seq_models",
+    "mlops",
+    "web_backend"
+   ]
+  },
+  {
+   "name": "人工知能(AI)社会の情報倫理",
+   "code": "INFO 341(マップ上はINFO 242)",
+   "year": 2,
+   "teaches": [
+    "ai_ethics"
+   ],
+   "note": "著作権・プライバシー・情報セキュリティも扱うが、辞書上はai_ethicsに集約"
+  },
+  {
+   "name": "データと計量経済学",
+   "code": "ECO 202",
+   "year": 2,
+   "teaches": [
+    "regression",
+    "hypothesis_test",
+    "probability",
+    "bayes",
+    "mcmc"
+   ]
+  },
+  {
+   "name": "サイバーフィジカルシステム",
+   "code": "INFO 205",
+   "year": 2,
+   "teaches": [
+    "cps",
+    "sensing"
+   ],
+   "note": "機械要素・機構設計の回は概念化していない"
+  },
+  {
+   "name": "データと数理Ⅱ",
+   "code": "INFO 212",
+   "year": 2,
+   "teaches": [
+    "calculus",
+    "gradient_descent",
+    "fourier",
+    "diff_eq"
+   ]
+  },
+  {
+   "name": "人工知能(AI)テクノロジデプロイメント",
+   "code": "INFO 241",
+   "year": 2,
+   "teaches": [
+    "ai_overview",
+    "dev_env",
+    "graph_search",
+    "optimization",
+    "clustering",
+    "knn",
+    "regression",
+    "model_eval",
+    "decision_tree",
+    "neural_net",
+    "cnn",
+    "seq_models"
+   ]
+  },
+  {
+   "name": "マルチメディア知識ベース",
+   "code": "INFO 301(マップ上はINFO 222)",
+   "year": 3,
+   "teaches": [
+    "rdb",
+    "sql_basic",
+    "db_design",
+    "spatiotemporal_db"
+   ]
+  },
+  {
+   "name": "データマイニング",
+   "code": "INFO 323",
+   "year": 3,
+   "teaches": [
+    "desc_stats",
+    "data_cleaning",
+    "data_viz",
+    "association_rules",
+    "clustering",
+    "regression",
+    "ml_framework",
+    "timeseries"
+   ]
+  },
+  {
+   "name": "ロボティクス・IoT",
+   "code": "INFO 324",
+   "year": 3,
+   "teaches": [
+    "robotics",
+    "image_processing",
+    "computer_vision",
+    "sensing"
+   ]
+  },
+  {
+   "name": "サイバーセキュリティと人工知能(AI)",
+   "code": "INFO 346",
+   "year": 3,
+   "teaches": [
+    "cybersecurity",
+    "anomaly_detection",
+    "generative_ai",
+    "xai",
+    "probability"
+   ],
+   "note": "授業計画は見出しのみで、概念は題名からの推定"
+  },
+  {
+   "name": "機械学習アルゴリズムデザイン",
+   "code": "INFO 222(マップ上はINFO 326)",
+   "year": 3,
+   "teaches": [
+    "ml_framework",
+    "neural_net",
+    "cnn",
+    "seq_models"
+   ],
+   "note": "夏期集中・ミニプロジェクト中心。概念は推定"
+  },
+  {
+   "name": "画像・音声認識システム",
+   "code": "INFO 321",
+   "year": 3,
+   "teaches": [
+    "image_processing",
+    "computer_vision",
+    "knn",
+    "neural_net",
+    "cnn",
+    "transfer_learning",
+    "dim_reduction",
+    "speech_recognition",
+    "signal",
+    "fourier"
+   ]
+  },
+  {
+   "name": "リアルワールド解析シミュレータ",
+   "code": "ES 303",
+   "year": 3,
+   "teaches": [
+    "geo",
+    "graph_search",
+    "simulation",
+    "data_viz"
+   ]
+  },
+  {
+   "name": "社会・環境デザイン・フィールドワーク",
+   "code": "ES 301",
+   "year": 3,
+   "teaches": [
+    "sensing",
+    "cps",
+    "data_viz"
+   ],
+   "note": "社会・環境デザイン(模擬交渉)の回は概念化していない"
+  },
+  {
+   "name": "専門デプロイメントコースⅠ(AIクリエーション)",
+   "code": "INFO 342",
+   "year": 3,
+   "teaches": [
+    "rdb",
+    "sql_basic",
+    "db_design",
+    "spatiotemporal_db"
+   ],
+   "note": "マルチメディア知識ベースと内容が近い"
+  },
+  {
+   "name": "専門デプロイメントコースⅡ(AIアルゴリズムデザイン)",
+   "code": "INFO 344",
+   "year": 3,
+   "teaches": [
+    "vector",
+    "similarity",
+    "regression",
+    "fourier",
+    "eigen",
+    "dim_reduction",
+    "ml_framework"
+   ]
+  },
+  {
+   "name": "専門デプロイメントコースⅢ(ソーシャルイノベーション)",
+   "code": "CS 313",
+   "year": 3,
+   "teaches": [
+    "web_front",
+    "web_backend",
+    "sql_basic",
+    "geo",
+    "timeseries",
+    "regression"
+   ],
+   "note": "オムニバス。Web開発の7回と応用データ分析の演習"
+  }
+ ],
+ "excluded_courses": [
+  {
+   "name": "ソーシャルイノベーションの起こし方",
+   "code": "CS 111",
+   "reason": "技術書に関係する概念がほぼない"
+  },
+  {
+   "name": "テクノロジマネジメント",
+   "code": "ES 201",
+   "reason": "産業史・SDGs中心で技術書に関係する概念がほぼない"
+  },
+  {
+   "name": "データサイエンス特論",
+   "code": "DS 301",
+   "reason": "オムニバス講義で概念が散らばる"
+  },
+  {
+   "name": "情報経済特論",
+   "code": "ECO 301",
+   "reason": "哲学・社会論中心で技術書に関係する概念がほぼない"
+  },
+  {
+   "name": "バーチャルリアリティ",
+   "code": "INFO 221(マップ上はINFO 325)",
+   "reason": "HCI・ハード中心。VR/Unity系の本が6階にあれば追加を検討"
+  },
+  {
+   "name": "グローバル・ビジネス・ガバナンス",
+   "code": "SS 311",
+   "reason": "ビジネス・ガバナンス中心"
+  },
+  {
+   "name": "マーケティングデータ分析",
+   "code": "CS 211",
+   "reason": "マーケティング理論とグループワーク中心で、データ分析手法は授業計画に出てこない"
+  }
+ ]
+}
